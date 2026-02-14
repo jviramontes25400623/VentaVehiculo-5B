@@ -9,22 +9,50 @@
  */
 public class Cliente {
 
-    //rs=razon social
-    private String rs = "";
-    private String rfc = "";
-    private String email = "";
+    private String rs;
+    private String rfc;
+    private String email;
 
+    // Constructor
     public Cliente(String rs, String rfc, String email) {
         this.rs = rs;
         this.rfc = rfc;
         this.email = email;
-
     }
 
+    // Getters
+    public String getRs() {
+        return rs;
+    }
+
+    public String getRfc() {
+        return rfc;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    // Setters
+    public void setRs(String rs) {
+        this.rs = rs;
+    }
+
+    public void setRfc(String rfc) {
+        this.rfc = rfc;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    // toString legible
     @Override
     public String toString() {
-        return this.rs + this.rfc + this.email;
+        return "Cliente{"
+                + "Razon Social='" + rs + '\''
+                + ", RFC='" + rfc + '\''
+                + ", Email='" + email + '\''
+                + '}';
     }
-
-    //atributos, constructor, toString
 }
